@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0876771D348B69006FC9BF /* YPhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0876751D348B69006FC9BF /* YPhotoViewCell.m */; };
+		4D0876781D348B69006FC9BF /* YPhotoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0876761D348B69006FC9BF /* YPhotoViewCell.xib */; };
 		4D6331511D3393DC0022F099 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6331501D3393DC0022F099 /* main.m */; };
 		4D6331541D3393DC0022F099 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6331531D3393DC0022F099 /* AppDelegate.m */; };
 		4D6331571D3393DC0022F099 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6331561D3393DC0022F099 /* ViewController.m */; };
 		4D63315A1D3393DC0022F099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6331581D3393DC0022F099 /* Main.storyboard */; };
 		4D63315C1D3393DC0022F099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D63315B1D3393DC0022F099 /* Assets.xcassets */; };
 		4D63315F1D3393DC0022F099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D63315D1D3393DC0022F099 /* LaunchScreen.storyboard */; };
+		4D6331681D339D380022F099 /* YLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6331671D339D380022F099 /* YLineLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0876741D348B69006FC9BF /* YPhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoViewCell.h; sourceTree = "<group>"; };
+		4D0876751D348B69006FC9BF /* YPhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoViewCell.m; sourceTree = "<group>"; };
+		4D0876761D348B69006FC9BF /* YPhotoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPhotoViewCell.xib; sourceTree = "<group>"; };
 		4D63314C1D3393DC0022F099 /* 相册布局.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "相册布局.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6331501D3393DC0022F099 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D6331521D3393DC0022F099 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		4D63315B1D3393DC0022F099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D63315E1D3393DC0022F099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D6331601D3393DC0022F099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D6331661D339D380022F099 /* YLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLineLayout.h; sourceTree = "<group>"; };
+		4D6331671D339D380022F099 /* YLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLineLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,11 @@
 		4D63314E1D3393DC0022F099 /* 相册布局 */ = {
 			isa = PBXGroup;
 			children = (
+				4D6331661D339D380022F099 /* YLineLayout.h */,
+				4D6331671D339D380022F099 /* YLineLayout.m */,
+				4D0876741D348B69006FC9BF /* YPhotoViewCell.h */,
+				4D0876751D348B69006FC9BF /* YPhotoViewCell.m */,
+				4D0876761D348B69006FC9BF /* YPhotoViewCell.xib */,
 				4D6331521D3393DC0022F099 /* AppDelegate.h */,
 				4D6331531D3393DC0022F099 /* AppDelegate.m */,
 				4D6331551D3393DC0022F099 /* ViewController.h */,
@@ -137,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D63315F1D3393DC0022F099 /* LaunchScreen.storyboard in Resources */,
+				4D0876781D348B69006FC9BF /* YPhotoViewCell.xib in Resources */,
 				4D63315C1D3393DC0022F099 /* Assets.xcassets in Resources */,
 				4D63315A1D3393DC0022F099 /* Main.storyboard in Resources */,
 			);
@@ -152,6 +166,8 @@
 				4D6331571D3393DC0022F099 /* ViewController.m in Sources */,
 				4D6331541D3393DC0022F099 /* AppDelegate.m in Sources */,
 				4D6331511D3393DC0022F099 /* main.m in Sources */,
+				4D0876771D348B69006FC9BF /* YPhotoViewCell.m in Sources */,
+				4D6331681D339D380022F099 /* YLineLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +316,7 @@
 				4D6331651D3393DC0022F099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

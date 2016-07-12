@@ -10,4 +10,7 @@
 
 @interface YPhotoViewCell : UICollectionViewCell
 
+/** 相片名称 */
+@property (nonatomic, copy) NSString *imageName;
+
 @end

@@ -8,11 +8,22 @@
 
 #import "YPhotoViewCell.h"
 
+@interface YPhotoViewCell()
+
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+
+@end
+
 @implementation YPhotoViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+}
+
+- (void)setImageName:(NSString *)imageName
+{
+    _imageName = [imageName copy];
+    self.photoImageView.image = [UIImage imageNamed:imageName];
 }
 
 @end
