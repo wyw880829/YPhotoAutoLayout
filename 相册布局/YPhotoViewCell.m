@@ -18,6 +18,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    self.photoImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.photoImageView.layer.borderWidth = 10;
+    
 }
 
 - (void)setImageName:(NSString *)imageName
