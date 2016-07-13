@@ -21,6 +21,11 @@
 - (void)prepareLayout
 {
     [super prepareLayout];
+    // 左右滑动
+    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    // 设置item尺寸
+    self.itemSize = CGSizeMake(200, 200);
+    // 设置内边距
     CGFloat inset = (self.collectionView.frame.size.width - self.itemSize.width) * 0.5;
     self.sectionInset = UIEdgeInsetsMake(0, inset, 0, inset);
 }
@@ -73,7 +78,7 @@
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
 {
    // 获取布局属性
-    // 矩形
+    // 范围矩形
     CGRect rect;
     rect.origin.x = proposedContentOffset.x;
     rect.origin.y = 0;

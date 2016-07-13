@@ -16,6 +16,7 @@
 		4D63315C1D3393DC0022F099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D63315B1D3393DC0022F099 /* Assets.xcassets */; };
 		4D63315F1D3393DC0022F099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D63315D1D3393DC0022F099 /* LaunchScreen.storyboard */; };
 		4D6331681D339D380022F099 /* YLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6331671D339D380022F099 /* YLineLayout.m */; };
+		4D7C324E1D35DC4E0068DA77 /* YCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C324D1D35DC4E0068DA77 /* YCircleLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		4D6331601D3393DC0022F099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D6331661D339D380022F099 /* YLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLineLayout.h; sourceTree = "<group>"; };
 		4D6331671D339D380022F099 /* YLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLineLayout.m; sourceTree = "<group>"; };
+		4D7C324C1D35DC4E0068DA77 /* YCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCircleLayout.h; sourceTree = "<group>"; };
+		4D7C324D1D35DC4E0068DA77 /* YCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCircleLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 			children = (
 				4D6331661D339D380022F099 /* YLineLayout.h */,
 				4D6331671D339D380022F099 /* YLineLayout.m */,
+				4D7C324C1D35DC4E0068DA77 /* YCircleLayout.h */,
+				4D7C324D1D35DC4E0068DA77 /* YCircleLayout.m */,
 				4D0876741D348B69006FC9BF /* YPhotoViewCell.h */,
 				4D0876751D348B69006FC9BF /* YPhotoViewCell.m */,
 				4D0876761D348B69006FC9BF /* YPhotoViewCell.xib */,
@@ -168,6 +173,7 @@
 				4D6331511D3393DC0022F099 /* main.m in Sources */,
 				4D0876771D348B69006FC9BF /* YPhotoViewCell.m in Sources */,
 				4D6331681D339D380022F099 /* YLineLayout.m in Sources */,
+				4D7C324E1D35DC4E0068DA77 /* YCircleLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "相册布局/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wyw.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "相册布局/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wyw.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";

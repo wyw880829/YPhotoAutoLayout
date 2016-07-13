@@ -9,8 +9,14 @@
 #import "ViewController.h"
 #import "YLineLayout.h"
 #import "YPhotoViewCell.h"
+#import "YCircleLayout.h"
 
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+
+/** collectionView */
+@property (nonatomic, weak) UICollectionView *collectionView;
+/** 数据 */
+@property (nonatomic, strong) NSMutableArray *imageNames;
 
 @end
 
@@ -18,40 +24,74 @@
 
 static NSString *const YPhotoCellID = @"cell";
 
+- (NSMutableArray *)imageNames
+{
+    if (_imageNames == nil) {
+        _imageNames = [NSMutableArray array];
+        for (int i = 0; i < 20; i++) {
+            [_imageNames addObject:[NSString stringWithFormat:@"%zd",i+1]];
+        }
+    }
+    return _imageNames;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // 布局
-    YLineLayout *layout = [[YLineLayout alloc] init];
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.itemSize = CGSizeMake(200, 200);
-    
+    YCircleLayout *layout = [[YCircleLayout alloc] init];
     CGFloat collectionViewW = self.view.frame.size.width;
     
+    // collectionView的尺寸
     CGRect frame = CGRectMake(0, 200, collectionViewW, 400);
 
     // collectionView
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     [self.view addSubview:collectionView];
-    
-    // 注册
-    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([YPhotoViewCell class]) bundle:nil] forCellWithReuseIdentifier:YPhotoCellID];
-    
+    // 设置数据源和代理
     collectionView.dataSource = self;
     collectionView.delegate = self;
+    self.collectionView = collectionView;
+    
+    // 注册cell
+    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([YPhotoViewCell class]) bundle:nil] forCellWithReuseIdentifier:YPhotoCellID];
+    
+}
+/**
+ *  触摸切换布局
+ */
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    if ([self.collectionView.collectionViewLayout isKindOfClass:[YLineLayout class]]) {
+        [self.collectionView setCollectionViewLayout:[[YCircleLayout alloc] init] animated:YES];
+        [self.collectionView reloadData];
+    } else {
+        YLineLayout *layout = [[YLineLayout alloc] init];
+        layout.itemSize = CGSizeMake(200, 200);
+        [self.collectionView setCollectionViewLayout:layout animated:YES];
+        [self.collectionView reloadData];
+    }
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 50;
+    return self.imageNames.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     YPhotoViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:YPhotoCellID forIndexPath:indexPath];
-    cell.imageName = [NSString stringWithFormat:@"%zd",indexPath.item + 1];
+    cell.imageName = self.imageNames[indexPath.item];
     
     return cell;
 }
+
+#pragma mark - <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.imageNames removeObjectAtIndex:indexPath.item];
+    [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+}
+
 
 @end
